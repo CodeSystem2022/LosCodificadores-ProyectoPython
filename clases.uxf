@@ -1,0 +1,143 @@
+<diagram program="umletino" version="15.1"><zoom_level>4</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>331</x><y>105</y><w>88</w><h>80</h></coordinates><panel_attributes>Operacion
+--
+_Atributos_
+-idOperacion: Int
+-tipoOperacion: String
+-cuerpoOperacion: String
+-resultado: Double
+--
+_Metodos_
++getter y setter de cada atributo
+--
+_Responsabilidades_
+Crear objetos de la entidad de 
+operaciones</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>431</x><y>61</y><w>88</w><h>96</h></coordinates><panel_attributes>OperacionDAO
+--
+_Atributos_
+-SELECCIONAR: String
+-INSERTAR: String
+-ACTUALIZAR: String
+-ELIMINAR: String
+--
+_Metodos_
++obtenerOperaciones(cls)
++agregarOperacion(cls, operacion)
++actualizarOperacion(cls, operacion)
++eliminarOperacion(cls, operacionId)
+--
+_Responsabilidades_
+Realizar las operaciones sobre la 
+base de datos</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>251</x><y>165</y><w>88</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10;200;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>219</x><y>213</y><w>88</w><h>60</h></coordinates><panel_attributes>claseConversor
+--
+_Atributos_
+-valorAConvertir: Double
+--
+_Metodos_
++getter y setter de cada atributo
+--
+_Responsabilidades_
+Crear operaciones que sean 
+conversiones de datos</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>335</x><y>181</y><w>12</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>319</x><y>229</y><w>88</w><h>72</h></coordinates><panel_attributes>claseFiguraGeometrica
+--
+_Atributos_
+-base: Double
+-altura: Double
+-radio: Double
+--
+_Metodos_
++getter y setter de cada atributo
+--
+_Responsabilidades_
+Crear operaciones relacionadas
+a figuaras geometricas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>419</x><y>229</y><w>88</w><h>96</h></coordinates><panel_attributes>claseMatrices
+--
+_Atributos_
+-matriz1
+-matriz2
+-matrizResultante
+--
+_Metodos_
++getter y setter de cada atributo
++sumarMatrices
++multiplicarMatrices
++matrizTraspuesta
++matrizPorUnEscalar
+--
+_Responsabilidades_
+Crear operaciones relacionadas
+a matrices utilizando Numpy</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>415</x><y>165</y><w>48</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;160;100;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>531</x><y>233</y><w>96</w><h>88</h></coordinates><panel_attributes>claseFunciones
+--
+_Atributos_
+-dato1: Double
+-dato2: Double
+-dato3: Double
+-resultado: Double
+--
+_Metodos_
++getter y setter de cada atributo
++raicesCuadraticas(dato1, dato2, dato3)
++pitagoras(dato1, dato2)
+--
+_Responsabilidades_
+Crear operaciones relacionadas
+a funciones matemáticas</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>451</x><y>165</y><w>100</w><h>76</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>230;170;230;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>183</x><y>241</y><w>44</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>119</x><y>289</y><w>68</w><h>68</h></coordinates><panel_attributes>UnidadLongitud
+--
+_Metodos_
++metroACentimetros()
++centimetrosAMetros()
++metrosAKilometros()
++kilometrosAMetros()
+--
+_Responsabilidades_
+Crear operaciones que sean 
+conversiones de datos que 
+representen longitudes</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>211</x><y>249</y><w>16</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10;20;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>203</x><y>297</y><w>68</w><h>68</h></coordinates><panel_attributes>UnidadPeso
+--
+_Metodos_
++kiloAGramo()
++gramosAKilos()
++kilosALibras()
++librasAKilos()
+--
+_Responsabilidades_
+Crear operaciones que sean 
+conversiones de datos que 
+representen magnitudes</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>155</x><y>369</y><w>68</w><h>88</h></coordinates><panel_attributes>UnidadTiempo
+--
+_Metodos_
++segundoAMinuto()
++minutosAHora()
++segundosAHora()
++horaASegundos()
++horasAMinutos()
++minutosASegundos()
+--
+_Responsabilidades_
+Crear operaciones que sean 
+conversiones de datos que 
+representen medidas de
+tiempo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>191</x><y>245</y><w>36</w><h>132</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;310;10;10;70;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>283</x><y>309</y><w>76</w><h>52</h></coordinates><panel_attributes>Rectangulo
+--
+_Metodos_
++area()
++perimetro()
+--
+_Responsabilidades_
+Crear operaciones relacionadas
+a un rectangulo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>295</x><y>281</y><w>32</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;70;10;10;60;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>367</x><y>333</y><w>76</w><h>52</h></coordinates><panel_attributes>Cuadrado
+--
+_Metodos_
++area()
++perimetro()
+--
+_Responsabilidades_
+Crear operaciones relacionadas
+a un cuadrado</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>375</x><y>297</y><w>12</w><h>44</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>359</x><y>297</y><w>12</w><h>84</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>287</x><y>373</y><w>76</w><h>52</h></coordinates><panel_attributes>Circulo
+--
+_Metodos_
++area()
++perimetro()
+--
+_Responsabilidades_
+Crear operaciones relacionadas
+a un circulo</panel_attributes><additional_attributes></additional_attributes></element></diagram>
