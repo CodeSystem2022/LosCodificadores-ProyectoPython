@@ -1,9 +1,8 @@
 import psycopg2 as bd
 import sys
 
-
 class Conexion:
-    _DATABASE = 'pruebaProyectoPython'
+    _DATABASE = 'calculadora'
     _USERNAME = 'postgres'
     _PASSWORD = 'admin'
     _DB_PORT = '5432'

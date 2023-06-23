@@ -2,6 +2,7 @@ from menus.menuFigurasGeometricas import menuFigurasGeometricas
 from menus.menuFunciones import menuFunciones
 from menus.menuMatrices import menuMatrices
 from menus.menuUnidades import menuUnidades
+from operacion.OperacionDAO import OperacionDAO
 
 def pantallaInicio():
     while (True):
