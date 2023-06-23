@@ -2,7 +2,7 @@ from Operacion import Operacion
 from config.db import Conexion
 
 class OperacionDAO:
-    _SELECCIONAR = 'SELECT * FROM calculadora'
+    _SELECCIONAR = 'SELECT * FROM operacion'
     _INSERTAR = 'INSERT INTO operacion(id_operacion, tipo_operacion, cuerpo_operacion, resultado)VALUES (%s, %s, %s, %s)'
 
     @classmethod
