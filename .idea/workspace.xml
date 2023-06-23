@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5428d2d-162b-4aa6-8c98-a9c0bfb4cf98" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/conversion/UnidadTiempo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion/UnidadPeso.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
