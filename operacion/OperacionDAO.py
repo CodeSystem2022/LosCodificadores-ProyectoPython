@@ -10,10 +10,10 @@ class OperacionDAO:
         with Conexion.obtenerConexion():
             with Conexion.obtenerCursor() as cursor:
                 cursor.execute(cls._SELECCIONAR)
-                registros = cursor.f
+                registros = cursor.fetchall()
                 operaciones = []
                 for registro in registros:
-                    operacion = Operacion(registro[0], registro[1], registro[2], registro[3])
+                    operacion = Operacion(registro[1], registro[2], registro[3])
                     operaciones.append(operacion)
                 return operaciones
             
