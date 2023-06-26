@@ -83,4 +83,10 @@ class Matrices(Operacion):
             print(self.get_matriz2())
             print("\n ----------MATRIZ RESULTADO----------")
             print(self.resultado)
-        
+
+    def transpuesta(self):
+        if self.matriz is None:
+            print("Error: La matriz no ha sido llenada. Por favor, llene la matriz primero.")
+            return
+
+        self.resultado = np.transpose(self.get_matriz())
