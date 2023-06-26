@@ -97,5 +97,11 @@ class Matrices(Operacion):
             return
 
         self.resultado = np.dot(self.get_matriz(), self.get_matriz2())
-        
+
+    def suma(self):
+        if self.matriz is None or self.matriz2 is None:
+            print("Error: Las matrices no han sido llenadas. Por favor, llene las matrices primero.")
+            return
+
+        self.resultado = np.add(self.get_matriz(), self.get_matriz2())
 
