@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5428d2d-162b-4aa6-8c98-a9c0bfb4cf98" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/conversion/UnidadPeso.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matrices/ClaseMatrices.py" beforeDir="false" afterPath="$PROJECT_DIR$/matrices/ClaseMatrices.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
