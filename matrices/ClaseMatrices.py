@@ -74,4 +74,13 @@ class Matrices(Operacion):
 
         self.set_matriz(matriz)
         self.set_matriz2(matriz2)
+
+    def mostrar_matrices(self):
+         print("\n ----------MATRIZ N°1---------- ")
+         print(self.get_matriz())
+        if self.get_matriz2() is not None:
+            print("\n ----------MATRIZ N°2---------- ")
+            print(self.get_matriz2())
+            print("\n ----------MATRIZ RESULTADO----------")
+            print(self.resultado)
         
