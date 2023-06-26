@@ -17,3 +17,61 @@ class Matrices(Operacion):
 
     def get_matriz2(self):
         return self.matriz2
+
+    def llenar_matrices(self, operation_type):
+
+        print(f'\n.:OPERACIÓN {operation_type.upper()} DE MATRICES:.\n')
+
+        n_filas = int(input('Ingrese el número de FILAS: '))
+        n_columnas = int(input('Ingrese el número de COLUMNAS: '))
+
+        matriz = np.empty((n_filas, n_columnas))
+
+
+        if operation_type !='escalar'and operation_type != 'transpuesta':
+             n_filas2 = int(input('Ingrese el número de FILAS de la segunda matriz: '))
+             n_columnas2 = int(input('Ingrese el número de COLUMNAS de la segunda matriz: '))
+
+             matriz2 = np.empty((n_filas2, n_columnas2))
+
+             if operation_type == 'suma':
+                     while matriz.shape != matriz2.shape:
+                        print("\nERROR: Las dimensiones de las matrices no son compatibles para la suma.\n")
+
+                        n_filas = int(input('Ingrese el número de FILAS de la primer matriz: '))
+                        n_columnas = int(input('Ingrese el número de COLUMNAS de la primer matriz: '))
+                        matriz = np.empty((n_filas, n_columnas))
+
+                        n_filas2 = int(input('Ingrese el número de FILAS de la segunda matriz: '))
+                        n_columnas2 = int(input('Ingrese el número de COLUMNAS de la segunda matriz: '))
+                        matriz2 = np.empty((n_filas2, n_columnas2))
+
+             elif operation_type == 'producto':
+                     while n_columnas != n_filas2:
+                        print("\nERROR: Las dimensiones de las matrices no son compatibles para el producto.\n")
+
+                        n_filas = int(input('Ingrese el número de FILAS de la primer matriz: '))
+                        n_columnas = int(input('Ingrese el número de COLUMNAS de la primer matriz: '))
+                        matriz = np.empty((n_filas, n_columnas))
+
+                        n_filas2 = int(input('Ingrese el número de FILAS de la segunda matriz: '))
+                        n_columnas2 = int(input('Ingrese el número de COLUMNAS de la segunda matriz: '))
+                        matriz2 = np.empty((n_filas2, n_columnas2))
+        else:
+            matriz2 = None
+
+        print(f"\n----------MATRIZ N° 1----------\n-----INGRESAMOS LOS VALORES-----")
+        for i in range(n_filas):
+            for j in range(n_columnas):
+                matriz[i, j] = float(input(f'Ingrese el valor para la posición[{i + 1}, {j + 1}]: '))
+
+        if operation_type != 'escalar' and operation_type != 'transpuesta':
+             print("\n----------MATRIZ N° 2----------\n-----INGRESAMOS LOS VALORES-----")
+             for i in range(n_filas2):
+                        for j in range(n_columnas2):
+                            matriz2[i, j] = float(input(f'Ingrese el valor para la posición[{i + 1}, {j + 1}]: '))
+
+
+        self.set_matriz(matriz)
+        self.set_matriz2(matriz2)
+        
