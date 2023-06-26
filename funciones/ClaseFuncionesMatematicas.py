@@ -1,4 +1,4 @@
 from Operacion import Operacion
 
-class Matrices(Operacion):
+class FuncionesMatematicas(Operacion):
     pass
