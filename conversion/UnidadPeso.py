@@ -30,4 +30,3 @@ class UnidadPeso(ClaseConversor):
         self.cuerpoOperacion = f'{valor} / 2.205'
         self.resultado = valor / 2.205
         return f'{valor} libras son {valor / 2.205} kilos'
-    
