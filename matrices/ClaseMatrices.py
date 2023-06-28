@@ -90,27 +90,33 @@ class Matrices(Operacion):
             print("Error: La matriz no ha sido llenada. Por favor, llene la matriz primero.")
             return
 
-        self.resultado = np.transpose(self.get_matriz())
+        self.resultado = np.array_str(np.transpose(self.get_matriz()))
+        self.cuerpoOperacion = f'Matriz transpuesta de: {self.get_matriz()}'
+        return self.resultado
 
     def producto(self):
         if self.matriz is None or self.matriz2 is None:
             print("Error: Las matrices no han sido llenadas. Por favor, llene las matrices primero.")
             return
-
-        self.resultado = np.dot(self.get_matriz(), self.get_matriz2())
+        self.resultado = np.array_str(np.dot(self.get_matriz(), self.get_matriz2()))
+        self.cuerpoOperacion = f'{self.get_matriz()} * {self.get_matriz2()}'
+        return self.resultado
 
     def suma(self):
         if self.matriz is None or self.matriz2 is None:
             print("Error: Las matrices no han sido llenadas. Por favor, llene las matrices primero.")
             return
+        self.resultado = np.array_str(np.add(self.get_matriz(), self.get_matriz2()))
+        self.cuerpoOperacion = f'{self.get_matriz()} + {self.get_matriz2()}'
+        return self.resultado
 
-        self.resultado = np.add(self.get_matriz(), self.get_matriz2())
-
-    def producto_escalar(self, escalar):
+    def producto_escalar(self):
         if self.matriz is None:
             print("Error: La matriz no ha sido llenada. Por favor, llene la matriz primero.")
             return
 
         escalar = int(input("\nIngrese el número por el que desea multiplicar la matriz: "))
 
-        self.resultado = np.multiply(self.get_matriz(), escalar)
+        self.resultado = np.array_str(np.multiply(self.get_matriz(), escalar))
+        self.cuerpoOperacion = f'{self.get_matriz()} * {escalar}'
+        return self.resultado
