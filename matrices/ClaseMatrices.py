@@ -6,6 +6,7 @@ class Matrices(Operacion):
     def __init__(self):
         self.matriz = None
         self.matriz2 = None
+        self.tipoOperacion = 'matrices'
 
     def set_matriz(self, matriz):
         self.matriz = matriz
