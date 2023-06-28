@@ -1,7 +1,6 @@
 from operacion.OperacionDAO import OperacionDAO
 from matrices.ClaseMatrices import Matrices
 
-
 def menuMatrices():
     while (True):
         print('MENÚ DE MATRICES')
