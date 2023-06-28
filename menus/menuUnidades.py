@@ -1,5 +1,5 @@
-from OperacionDAO import OperacionDAO
-from UnidadLongitud import UnidadLongitud
+from operacion.OperacionDAO import OperacionDAO
+from conversion.UnidadLongitud import UnidadLongitud
 from conversion.UnidadPeso import UnidadPeso
 from conversion.UnidadTiempo import UnidadTiempo
 

@@ -1,5 +1,5 @@
-from OperacionDAO import OperacionDAO
-from figuras.Rectangulo import Rectangulo
+from operacion.OperacionDAO import OperacionDAO
+# from figuras.Rectangulo import Rectangulo
 
 def menuFigurasGeometricas():
     while(True):

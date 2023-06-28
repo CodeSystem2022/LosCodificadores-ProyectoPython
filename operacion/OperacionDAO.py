@@ -1,4 +1,4 @@
-from Operacion import Operacion
+from operacion.Operacion import Operacion
 from config.db import Conexion
 
 class OperacionDAO:
@@ -13,14 +13,21 @@ class OperacionDAO:
                 registros = cursor.fetchall()
                 operaciones = []
                 for registro in registros:
-                    operacion = Operacion(registro[1], registro[2], registro[3])
+                    print(registro[1])
+                    operacion = Operacion(
+                        registro[1], registro[2], registro[3])
                     operaciones.append(operacion)
+                Conexion._conexion = None
+                Conexion._cursor = None
                 return operaciones
-            
+
     @classmethod
     def agregarDato(cls, operacion):
         with Conexion.obtenerConexion():
             with Conexion.obtenerCursor() as cursor:
-                valores = (id(operacion), operacion.tipoOperacion, operacion.cuerpoOperacion, operacion.resultado)
+                valores = (id(operacion), operacion.tipoOperacion,
+                           operacion.cuerpoOperacion, operacion.resultado)
                 cursor.execute(cls._INSERTAR, valores)
+                Conexion._conexion = None
+                Conexion._cursor = None
                 return cursor.rowcount
