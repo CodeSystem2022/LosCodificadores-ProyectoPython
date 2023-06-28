@@ -1,6 +1,5 @@
 import numpy as np
-from Operacion import Operacion
-
+from operacion.Operacion import Operacion
 
 class Matrices(Operacion):
 

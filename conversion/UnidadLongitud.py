@@ -1,4 +1,4 @@
-from ClaseConversor import ClaseConversor
+from conversion.ClaseConversor import ClaseConversor
 
 
 class UnidadLongitud(ClaseConversor):

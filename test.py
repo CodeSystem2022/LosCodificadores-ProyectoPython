@@ -45,4 +45,4 @@ def pantallaInicio():
             case _:
                 print('Ingrese una opción correcta')
 
-    pantallaInicio()
+pantallaInicio()

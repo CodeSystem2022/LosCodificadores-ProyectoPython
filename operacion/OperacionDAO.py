@@ -1,4 +1,4 @@
-from Operacion import Operacion
+from operacion.Operacion import Operacion
 from config.db import Conexion
 
 class OperacionDAO:
