@@ -1,6 +1,7 @@
 from operacion.Operacion import Operacion
 from config.db import Conexion
 
+
 class OperacionDAO:
     _SELECCIONAR = 'SELECT * FROM operacion'
     _INSERTAR = 'INSERT INTO operacion(id_operacion, tipo_operacion, cuerpo_operacion, resultado)VALUES (%s, %s, %s, %s)'
@@ -13,7 +14,6 @@ class OperacionDAO:
                 registros = cursor.fetchall()
                 operaciones = []
                 for registro in registros:
-                    print(registro[1])
                     operacion = Operacion(
                         registro[1], registro[2], registro[3])
                     operaciones.append(operacion)
