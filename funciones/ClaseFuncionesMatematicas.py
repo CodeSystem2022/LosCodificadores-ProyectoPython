@@ -55,9 +55,10 @@ class FuncionesMatematicas(Operacion):
 
             self.cuerpoOperacion = f'{a}x^2 +({b}x) + ({c}) = x1: {raiz1}, x2: {raiz2}'
             self.resultado = {'x1': raiz1, 'x2': raiz2}
-
             return {'x1': raiz1, 'x2': raiz2}
         else:
             print(
                 'Esta raiz no se puede resolver en el dominio de los números reales, intente con otra función')
             FuncionesMatematicas.raicesCuadraticas()
+
+            
