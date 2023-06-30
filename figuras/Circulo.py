@@ -1,14 +1,17 @@
 from figuras.FigurasGeometricas import FigurasGeometricas
 import math
 
-
 class Circulo(FigurasGeometricas):
 
     @classmethod
-    def calcular_area(cls):
-        return math.pi * cls.radio ** 2
+    def area(cls, radio):
+        cls.cuerpoOperacion = f'{math.pi} * {radio} ^ 2'
+        cls.resultado = math.pi * radio ** 2
+        return cls.resultado
 
     @classmethod
-    def calcular_perimetro(cls):
-        return 2 * math.pi * cls.radio
+    def perimetro(cls, radio):
+        cls.cuerpoOperacion = f'2 * {math.pi} * {radio}'
+        cls.resultado = 2 * math.pi * radio
+        return cls.resultado
 
