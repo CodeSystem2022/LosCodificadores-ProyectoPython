@@ -1,3 +1,4 @@
+from uuid import uuid4
 from operacion.Operacion import Operacion
 from config.db import Conexion
 
@@ -25,7 +26,7 @@ class OperacionDAO:
     def agregarDato(cls, operacion):
         with Conexion.obtenerConexion():
             with Conexion.obtenerCursor() as cursor:
-                valores = (id(operacion), operacion.tipoOperacion,
+                valores = (uuid4(), operacion.tipoOperacion,
                            operacion.cuerpoOperacion, operacion.resultado)
                 cursor.execute(cls._INSERTAR, valores)
                 Conexion._conexion = None
